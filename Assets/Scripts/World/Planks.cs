@@ -1,33 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SpanPlanks : MonoBehaviour 
+public class Planks : MonoBehaviour 
 {
-    //public GameObject Plank;
-    private int score = 0;
-
     private Vector3 m_PlankPos;
 
-    private const float m_sRandomXMin = -15f;
-    private const float m_sRandomXMax =  20f;
-    private const float m_sRandomYMin =  17f;
-    private const float m_sRandomYMax =  40f;
+    private const float m_sRandomXMin = -10f;
+    private const float m_sRandomXMax = 15f;
+    private const float m_sRandomYMin = 35f;
+    private const float m_sRandomYMax = 60f;
 
-    // Use this for initialization
-    void Start()
-    {
-    }
-
-    void FixedUpdate()
-    {
-    }
-
-    void OnBecameInvisible()
+	// Use this for initialization
+	void Start () 
     {
         MovePlank();
-    }
+	}
+	
+	// Update is called once per frame
+	void Update () 
+    {
+        Vector2 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
+        if (screenPosition.x > Screen.width)
+        {
+            MovePlank();
+        }
+	}
 
-    void OnCollisionEnter(Collision col)
+    void OnCollisionEnter2D (Collision2D col)
     {
         Debug.Log("Collision");
         if (col.gameObject.tag == "Wall")
@@ -36,9 +35,15 @@ public class SpanPlanks : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        print("CollisionTrigger");
+        MovePlank();
+    }
+
     void MovePlank()
     {
-        Debug.Log("Moved");
+        print("Moved");
         m_PlankPos = gameObject.transform.position;
 
         float randomPosX = Random.Range(m_sRandomXMin, m_sRandomXMax);

@@ -68,10 +68,10 @@
      <Compile Include="Assets\Scripts\SetParticleSortingLayer.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\World\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\World\CloneDeleter.cs" />
      <Compile Include="Assets\Scripts\World\EndlessBackground.cs" />
      <Compile Include="Assets\Scripts\World\GeneratePlanks.cs" />
-     <Compile Include="Assets\Scripts\World\Planks.cs" />
-     <Compile Include="Assets\Scripts\World\SpanPlanks.cs" />
+     <Compile Include="Assets\Scripts\World\Plank.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />

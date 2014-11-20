@@ -7,20 +7,12 @@ public class EndlessBackground : MonoBehaviour
     private const float m_sMoveHeight = 53f;
     private bool waited;
 
-    IEnumerator Wait()
-    {
-        print(Time.time);
-        waited = false;
-        yield return new WaitForSeconds(5f);
-        waited = true;
-        print(Time.time);
-    }
-
+    public IEnumerator waitFuntion()
+    { yield return new WaitForSeconds(5);  }
 	// Use this for initialization
 	void Start () 
     {
-        while (waited)
-        { }
+        waitFuntion();
 	}
 	
 	// Update is called once per frame

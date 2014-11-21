@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CloneDeleter : MonoBehaviour {
+public class IceController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -9,12 +9,7 @@ public class CloneDeleter : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () 
-    {  
+	void Update () {
+	
 	}
-
-    void OnBecameInvisible()
-    {
-        Destroy(gameObject);
-    }
 }

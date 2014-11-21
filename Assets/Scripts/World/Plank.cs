@@ -21,9 +21,8 @@ public class Plank : MonoBehaviour
         MovePlank();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void FixedUpdate()
+    {     
     }
 
     void MovePlank()
@@ -65,5 +64,10 @@ public class Plank : MonoBehaviour
         }
 
         return highestY;
+    }
+
+    void OnBecameVisible()
+    {
+        GameController.IncreaseScore();
     }
 }

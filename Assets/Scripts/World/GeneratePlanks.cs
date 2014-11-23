@@ -53,6 +53,7 @@ public class GeneratePlanks : MonoBehaviour {
                 print("Invoke Call " + m_InvokeRepeat);
                 m_Clone = (GameObject)Instantiate(planks[i]);
                 m_Clone.AddComponent("CloneDeleter");
+                m_Clone.layer = 12;
             }
             yield return new WaitForSeconds(m_InvokeRepeat);
         }

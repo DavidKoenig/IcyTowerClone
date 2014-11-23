@@ -57,6 +57,7 @@ public class RobotControllerScript : MonoBehaviour {
         {
             anim.SetBool("Ground", false);
             rigidbody2D.AddForce(new Vector2(0, jumpForce));
+            audio.Play();
 
             if (!doubleJump && !grounded)
                 doubleJump = true;

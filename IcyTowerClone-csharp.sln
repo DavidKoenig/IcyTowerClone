@@ -1,8 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{B676B5C4-3FE8-A378-DE24-F13914520738}") = "IcyTowerClone", "Assembly-CSharp-firstpass-vs.csproj", "{2D35BB86-80E1-6796-CF46-3C546456FA17}"
-EndProject
 Project("{B676B5C4-3FE8-A378-DE24-F13914520738}") = "IcyTowerClone", "Assembly-CSharp-vs.csproj", "{79E88D8D-3EE2-E3DC-F883-1C3098F27EFD}"
 EndProject
 Global
@@ -11,10 +9,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2D35BB86-80E1-6796-CF46-3C546456FA17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D35BB86-80E1-6796-CF46-3C546456FA17}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D35BB86-80E1-6796-CF46-3C546456FA17}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D35BB86-80E1-6796-CF46-3C546456FA17}.Release|Any CPU.Build.0 = Release|Any CPU
 		{79E88D8D-3EE2-E3DC-F883-1C3098F27EFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{79E88D8D-3EE2-E3DC-F883-1C3098F27EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79E88D8D-3EE2-E3DC-F883-1C3098F27EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -23,7 +17,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																									GlobalSection(MonoDevelopProperties) = preSolution
+																														GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

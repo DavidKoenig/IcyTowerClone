@@ -5,9 +5,19 @@ public class CameraMovement : MonoBehaviour
 {
     private Vector3 m_CamPos;
     public static float m_sCameraSpeed;
-	// Use this for initialization
+
+    IEnumerator WaitAtStart()
+    {
+        yield return new WaitForSeconds(5f);
+        while (true)
+        {
+            yield return new WaitForSeconds(5f);
+        }
+    }
+
 	void Start () 
     {
+        WaitAtStart();
         m_sCameraSpeed = 8f;
 	}
 	
@@ -22,8 +32,8 @@ public class CameraMovement : MonoBehaviour
     {
         if (m_sCameraSpeed < 18f)
         {
-            //m_sCameraSpeed += 2f;
-            //print("Speed: " + m_sCameraSpeed);
+            m_sCameraSpeed += 1f;
+            print("Speed: " + m_sCameraSpeed);
         }
     }
 }

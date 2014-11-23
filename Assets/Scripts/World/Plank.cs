@@ -29,7 +29,7 @@ public class Plank : MonoBehaviour
     {
         float leftBorderX   = m_LeftBorder.transform.position.x;
         float rightBorderX  = m_RightBorder.transform.position.x;
-        float cameraY       = Camera.main.gameObject.transform.position.y;
+        //float cameraY       = Camera.main.gameObject.transform.position.y;
 
         float highestY      = FindHighestPlank();
         float minY          = highestY + 5f;
@@ -62,7 +62,6 @@ public class Plank : MonoBehaviour
                 highestY = plankY;
             }
         }
-
         return highestY;
     }
 

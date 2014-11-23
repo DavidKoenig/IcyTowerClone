@@ -4,60 +4,57 @@ using System.Diagnostics;
 
 public class GeneratePlanks : MonoBehaviour {
 
-    public GameObject[] planks;   
-    public float m_InvokeStart  = 1f;
-    public float m_InvokeRepeat = 5f;
+    public GameObject[] planks;
 
     private GameObject m_Clone;
+    private float m_InvokeRepeat = 5f;
 
-    // Use this for initialization
     void Start()
-    {       
-        InvokeRepeating("CreateObstacle", m_InvokeStart, m_InvokeRepeat);
+    {
+        StartCoroutine(Spawn());
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        //if (CameraMovement.m_sCameraSpeed == 10f)
-        //{
-        //    m_InvokeRepeat = 7f;
-        //    CancelInvoke("CreateObstacle");
-        //    InvokeRepeating("CreateObstacle", m_InvokeStart, m_InvokeRepeat);
-        //}
-        //else if (CameraMovement.m_sCameraSpeed == 12f)
-        //{
-        //    m_InvokeRepeat = 9f;
-        //    CancelInvoke("CreateObstacle");
-        //    InvokeRepeating("CreateObstacle", m_InvokeStart, m_InvokeRepeat);
-        //}
-        //else if (CameraMovement.m_sCameraSpeed == 14f)
-        //{
-        //    m_InvokeRepeat = 11f;
-        //    CancelInvoke("CreateObstacle");
-        //    InvokeRepeating("CreateObstacle", m_InvokeStart, m_InvokeRepeat);
-        //}
-        //else if (CameraMovement.m_sCameraSpeed == 16f)
-        //{
-        //    m_InvokeRepeat = 13f;
-        //    CancelInvoke("CreateObstacle");
-        //    InvokeRepeating("CreateObstacle", m_InvokeStart, m_InvokeRepeat);
-        //}
-        //else if (CameraMovement.m_sCameraSpeed == 18f)
-        //{
-        //    m_InvokeRepeat = 15f;
-        //    CancelInvoke("CreateObstacle");
-        //    InvokeRepeating("CreateObstacle", m_InvokeStart, m_InvokeRepeat);
-        //}
-    }
-
-    void CreateObstacle()
-    {
-        for (int i = 0; i < planks.Length; i++)
+        if (CameraMovement.m_sCameraSpeed <= 10f)
         {
-            new WaitForSeconds(3);
+            print("invoke 1");
+            m_InvokeRepeat = 4f;
+        }
+        else if (CameraMovement.m_sCameraSpeed <= 12f && CameraMovement.m_sCameraSpeed >= 10f)
+        {
+            print("invoke 2");
+            m_InvokeRepeat = 3.5f;
+        }
+        else if (CameraMovement.m_sCameraSpeed <= 14f && CameraMovement.m_sCameraSpeed >= 12f)
+        {
+            print("invoke 3");
+            m_InvokeRepeat = 3.3f;
+        }
+        else if (CameraMovement.m_sCameraSpeed <= 16f && CameraMovement.m_sCameraSpeed >= 14f)
+        {
+            print("invoke 4");
+            m_InvokeRepeat = 2.5f;
+        }
+        else if (CameraMovement.m_sCameraSpeed <= 18f && CameraMovement.m_sCameraSpeed >= 16f)
+        {
+            print("invoke 5");
+            m_InvokeRepeat = 2.2f;
+        }
+    }
 
-            m_Clone = (GameObject) Instantiate(planks[i]);
-            m_Clone.AddComponent("CloneDeleter");
+    IEnumerator Spawn() 
+    {
+        yield return new WaitForSeconds(m_InvokeRepeat);
+        while (true)
+        {
+            for (int i = 0; i < planks.Length; i++)
+            {
+                print("Invoke Call " + m_InvokeRepeat);
+                m_Clone = (GameObject)Instantiate(planks[i]);
+                m_Clone.AddComponent("CloneDeleter");
+            }
+            yield return new WaitForSeconds(m_InvokeRepeat);
         }
     }
 }

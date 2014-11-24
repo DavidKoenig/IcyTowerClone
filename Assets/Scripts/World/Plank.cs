@@ -9,6 +9,8 @@ public class Plank : MonoBehaviour
     private Vector3 m_PlankPos;
     private float m_Width;
 
+    private GameController m_GameController;
+
     // Use this for initialization
     void Start()
     {
@@ -16,7 +18,9 @@ public class Plank : MonoBehaviour
         m_RightBorder           = GameObject.Find("RightBorder");
         m_GoPlank               = gameObject;
         Collider2D collider2D   = m_GoPlank.GetComponent<Collider2D>();
-        m_Width                 = collider2D.bounds.size.x;             
+        m_Width                 = collider2D.bounds.size.x;
+
+        m_GameController = GameObject.Find("GameController").GetComponent("GameController") as GameController;
 
         MovePlank();
     }
@@ -67,6 +71,6 @@ public class Plank : MonoBehaviour
 
     void OnBecameVisible()
     {
-        GameController.IncreaseScore();
+        m_GameController.IncreaseScore();
     }
 }

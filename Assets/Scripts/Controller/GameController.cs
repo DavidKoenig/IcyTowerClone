@@ -18,6 +18,8 @@ public class GameController : MonoBehaviour {
         m_GUIHighscore  = GameObject.Find("Highscore").GetComponent<GUIText>() as GUIText;
         m_GUIHurry      = GameObject.Find("Hurry").GetComponent<GUIText>() as GUIText;
 
+        m_GUIHurry.color = new Color(m_GUIHurry.color.r, m_GUIHurry.color.g, m_GUIHurry.color.b, 0f);
+
         Physics2D.IgnoreLayerCollision(13, 12, true);
 	}
 	
@@ -49,13 +51,28 @@ public class GameController : MonoBehaviour {
         m_sScore += 10;
         if (m_sScore >= 50 && (m_sScore % 50) == 0)
         {
-            //Fading();
-            CameraMovement.IncreaseCameraSpeed();
+            StartCoroutine(FadingIn());
+            m_GUIHurry.color = new Color(m_GUIHurry.color.r, m_GUIHurry.color.g, m_GUIHurry.color.b, 0f);
+            CameraMovement.IncreaseCameraSpeed();       
         }
     }
 
-    private void Fading()
+    IEnumerator FadingIn()
     {
+        yield return new WaitForSeconds(0.1f);
+        while (true)
+        {
+            m_GUIHurry.color = new Color(m_GUIHurry.color.r, m_GUIHurry.color.g, m_GUIHurry.color.b, 1f);
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+
+    private void FadingOut()
+    {
+        for (float a = 1f; a >= 0f; a -= 0.1f)
+        {
+            m_GUIHurry.color = new Color(m_GUIHurry.color.r, m_GUIHurry.color.g, m_GUIHurry.color.b, a);
+        }
         m_GUIHurry.color = new Color(m_GUIHurry.color.r, m_GUIHurry.color.g, m_GUIHurry.color.b, 0f);
     }
 }

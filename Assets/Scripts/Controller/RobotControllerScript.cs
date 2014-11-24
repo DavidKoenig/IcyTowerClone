@@ -62,6 +62,11 @@ public class RobotControllerScript : MonoBehaviour {
             if (!doubleJump && !grounded)
                 doubleJump = true;
         }
+
+        if (rigidbody2D.velocity.y > 0)
+            gameObject.layer = 13;
+        else
+            gameObject.layer = 9;
     }
 
     void OnCollisionEnter2D(Collision2D coll)

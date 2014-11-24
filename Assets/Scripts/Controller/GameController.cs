@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour {
     // Use this for initialization
 	void Start () {
         m_sScore = 0;
+        Physics2D.IgnoreLayerCollision(13, 12, true);
 	}
 	
 	// Update is called once per frame

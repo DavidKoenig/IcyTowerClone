@@ -17,9 +17,17 @@ public class GameController : MonoBehaviour {
 
     void OnGUI()
     {
-        GUI.color = Color.black;
+        //GUI.color = Color.black;
+        //GUI.skin.label.fontSize = 25;
+        //GUI.Label(new Rect(Screen.width - 390, 610, 200, 50), "Score: " + m_sScore.ToString());
+
+        //GUI.color = Color.black;
+        //GUI.skin.label.fontSize = 25;
+        //GUI.Label(new Rect(Screen.width - 1170, 610, 200, 50), "Highscore: " + m_sScore.ToString());
+
+        GUI.color = Color.white;
         GUILayout.Label("Score: " + m_sScore.ToString());
-        GUI.color = Color.black;
+        GUI.color = Color.white;
         GUILayout.Label("Highscore: " + m_sScore.ToString());
     }
 

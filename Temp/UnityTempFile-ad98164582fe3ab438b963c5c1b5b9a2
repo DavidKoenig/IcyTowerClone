@@ -6,7 +6,7 @@
 -nowarn:BCW0016
 -nowarn:BCW0003
 -method:Main
--out:Temp/Assembly-UnityScript-firstpass.dll
+-out:Temp/Assembly-UnityScript.dll
 -x-type-inference-rule-attribute:UnityEngineInternal.TypeInferenceRuleAttribute
 -define:UNITY_4_5_5
 -define:UNITY_4_5
@@ -45,13 +45,4 @@
 -r:"D:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll"
 -r:"D:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll"
 -i:UnityEditor
-"Assets/Standard Assets/Character Controllers/Sources/Scripts/CharacterMotor.js"
-"Assets/Standard Assets/Character Controllers/Sources/Scripts/FPSInputController.js"
-"Assets/Standard Assets/Character Controllers/Sources/Scripts/PlatformInputController.js"
-"Assets/Standard Assets/Character Controllers/Sources/Scripts/ThirdPersonCamera.js"
-"Assets/Standard Assets/Character Controllers/Sources/Scripts/ThirdPersonController.js"
-"Assets/Standard Assets/Particles/Legacy Particles/TimedObjectDestructor.js"
-"Assets/Standard Assets/Scripts/Camera Scripts/MouseOrbit.js"
-"Assets/Standard Assets/Scripts/Camera Scripts/SmoothFollow.js"
-"Assets/Standard Assets/Scripts/Camera Scripts/SmoothLookAt.js"
-"Assets/Standard Assets/Scripts/General Scripts/DragRigidbody.js"
+Assets/SmoothFollow2D.js

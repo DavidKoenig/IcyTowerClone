@@ -677,9 +677,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 705119365}
   - 212: {fileID: 705119366}
-  m_Layer: 0
+  - 61: {fileID: 705119367}
+  m_Layer: 12
   m_Name: ice_texture
-  m_TagString: Untagged
+  m_TagString: Ice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -691,7 +692,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 705119364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .300930023, y: -15.991889, z: -8.89404297}
+  m_LocalPosition: {x: .300928116, y: -16.1373444, z: -8.89404297}
   m_LocalScale: {x: 1.23000002, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2021789417}
@@ -718,6 +719,17 @@ SpriteRenderer:
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 7c2b7615f4f7acc4f9c715e78b34a30e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!61 &705119367
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 705119364}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 39.5999985, y: 3.75999999}
+  m_Center: {x: 0, y: -1.11000001}
 --- !u!1 &710580210
 GameObject:
   m_ObjectHideFlags: 0
@@ -2597,9 +2609,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 2021789417}
   - 114: {fileID: 2021789416}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ice
-  m_TagString: Untagged
+  m_TagString: Ice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2612,13 +2624,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2021789415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8947ae06ca3df4fcc9786140c1d86f15, type: 3}
+  m_Script: {fileID: 11500000, guid: 13be348debe92ed48ad469909860bc83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 806274474}
   smoothTime: 0
-  thisTransform: {fileID: 0}
-  velocity: {x: 0, y: 0}
 --- !u!4 &2021789417
 Transform:
   m_ObjectHideFlags: 0

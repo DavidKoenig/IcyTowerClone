@@ -64,11 +64,22 @@ public class RobotControllerScript : MonoBehaviour {
         }
     }
 
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Ice")
+            Die();
+    }
+
     void Flip()
     {
         facingRight = !facingRight;
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    void Die()
+    {
+        Application.LoadLevel(Application.loadedLevel);
     }
 }

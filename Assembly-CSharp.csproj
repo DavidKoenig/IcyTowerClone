@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\World\CloneDeleter.cs" />
      <Compile Include="Assets\Scripts\World\EndlessBG.cs" />
      <Compile Include="Assets\Scripts\World\EndlessBackground.cs" />
+     <Compile Include="Assets\Scripts\World\EndlessSW.cs" />
      <Compile Include="Assets\Scripts\World\GeneratePlanks.cs" />
      <Compile Include="Assets\Scripts\World\Plank.cs" />
   </ItemGroup>

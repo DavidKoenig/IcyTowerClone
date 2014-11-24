@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EndlessBG : MonoBehaviour {
+public class EndlessSW : MonoBehaviour {
 
     private Vector3 m_BackPos;
     private float m_sMoveHeight;
@@ -10,15 +10,16 @@ public class EndlessBG : MonoBehaviour {
     void Start()
     {
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     void OnBecameInvisible()
     {
-        m_sMoveHeight = gameObject.renderer.bounds.size.y - 1f;
+        m_sMoveHeight = gameObject.renderer.bounds.size.y - 10f;
         // get current position
         m_BackPos = gameObject.transform.position;
 

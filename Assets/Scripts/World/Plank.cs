@@ -32,8 +32,8 @@ public class Plank : MonoBehaviour
         //float cameraY       = Camera.main.gameObject.transform.position.y;
 
         float highestY      = FindHighestPlank();
-        float minY          = highestY + 5f;
-        float maxY          = highestY + 15f;
+        float minY          = highestY + 3f;
+        float maxY          = highestY + 10f;
 
         m_PlankPos = m_GoPlank.transform.position;
 

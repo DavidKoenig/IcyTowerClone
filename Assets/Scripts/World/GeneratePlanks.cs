@@ -26,15 +26,15 @@ public class GeneratePlanks : MonoBehaviour {
         }
         else if (CameraMovement.m_sCameraSpeed <= 14f && CameraMovement.m_sCameraSpeed >= 12f)
         {
-            m_InvokeRepeat = 3.3f;
+            m_InvokeRepeat = 3f;
         }
         else if (CameraMovement.m_sCameraSpeed <= 16f && CameraMovement.m_sCameraSpeed >= 14f)
         {
-            m_InvokeRepeat = 2.5f;
+            m_InvokeRepeat = 2.0f;
         }
         else if (CameraMovement.m_sCameraSpeed <= 18f && CameraMovement.m_sCameraSpeed >= 16f)
         {
-            m_InvokeRepeat = 2.2f;
+            m_InvokeRepeat = 1.85f;
         }
     }
 

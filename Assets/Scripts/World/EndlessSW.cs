@@ -19,7 +19,7 @@ public class EndlessSW : MonoBehaviour {
 
     void OnBecameInvisible()
     {
-        m_sMoveHeight = gameObject.renderer.bounds.size.y - 10f;
+        m_sMoveHeight = gameObject.renderer.bounds.size.y - 5f;
         // get current position
         m_BackPos = gameObject.transform.position;
 

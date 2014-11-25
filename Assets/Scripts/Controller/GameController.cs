@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour {
         Physics2D.IgnoreLayerCollision(13, 12, true);
 
         m_sScore     = 0;
-        m_sHighscore = 0;
+        m_sHighscore = PlayerPrefs.GetInt("highscore");
        
         m_GUIScore      = GameObject.Find("Score").GetComponent<GUIText>() as GUIText;
         m_GUIHighscore  = GameObject.Find("Highscore").GetComponent<GUIText>() as GUIText;
@@ -36,5 +36,10 @@ public class GameController : MonoBehaviour {
             m_GUIHurry.animation.Play("HurryText");
             CameraMovement.IncreaseCameraSpeed();
         }
+    }
+
+    public int getScore()
+    {
+        return m_sScore;
     }
 }

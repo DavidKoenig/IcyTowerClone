@@ -147,7 +147,7 @@ GameObject:
   - 212: {fileID: 66299298}
   - 61: {fileID: 66299297}
   - 50: {fileID: 66299296}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: PlankWoodXL
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   - 212: {fileID: 324260620}
   - 61: {fileID: 324260619}
   - 50: {fileID: 324260618}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: PlankIceM
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   - 4: {fileID: 342526262}
   - 212: {fileID: 342526265}
   - 61: {fileID: 342526264}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: PlankWoodM
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -404,7 +404,7 @@ GameObject:
   - 61: {fileID: 370872032}
   - 50: {fileID: 370872031}
   - 114: {fileID: 370872034}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: PlankIceM
   m_TagString: Plank
   m_Icon: {fileID: 0}
@@ -585,11 +585,10 @@ GameObject:
   - 4: {fileID: 468795877}
   - 212: {fileID: 468795880}
   - 114: {fileID: 468795881}
-  - 61: {fileID: 468795879}
-  - 50: {fileID: 468795878}
-  m_Layer: 13
+  - 61: {fileID: 468795878}
+  m_Layer: 12
   m_Name: PlankWoodS
-  m_TagString: Plank
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -606,22 +605,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 710580211}
   m_RootOrder: 0
---- !u!50 &468795878
-Rigidbody2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 468795876}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 0
-  m_FixedAngle: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
---- !u!61 &468795879
+--- !u!61 &468795878
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -737,7 +721,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 710580211}
   - 114: {fileID: 710580212}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -781,57 +765,6 @@ MonoBehaviour:
   - {fileID: 370872029}
   - {fileID: 1431486581}
   - {fileID: 1431486581}
---- !u!1 &740755560
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 740755562}
-  - 132: {fileID: 740755561}
-  m_Layer: 0
-  m_Name: Score
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!132 &740755561
-GUIText:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 740755560}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Text: 'Score:'
-  m_Anchor: 0
-  m_Alignment: 0
-  m_PixelOffset: {x: 0, y: 0}
-  m_LineSpacing: 1
-  m_TabSize: 4
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-  m_Material: {fileID: 0}
-  m_FontSize: 25
-  m_FontStyle: 0
-  m_Color:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_PixelCorrect: 1
-  m_RichText: 1
---- !u!4 &740755562
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 740755560}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .680000007, y: .0450000018, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
 --- !u!1 &806274469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,7 +982,7 @@ GameObject:
   - 212: {fileID: 1010136299}
   - 61: {fileID: 1010136298}
   - 50: {fileID: 1010136297}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: PlankIceXL
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1119,57 +1052,6 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: fefd3ef4575bf460897e37cb36fdb945, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &1022960205
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1022960207}
-  - 132: {fileID: 1022960206}
-  m_Layer: 0
-  m_Name: Highscore
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!132 &1022960206
-GUIText:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1022960205}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Text: 'Highscore:'
-  m_Anchor: 0
-  m_Alignment: 0
-  m_PixelOffset: {x: 0, y: 0}
-  m_LineSpacing: 1
-  m_TabSize: 4
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-  m_Material: {fileID: 0}
-  m_FontSize: 25
-  m_FontStyle: 0
-  m_Color:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_PixelCorrect: 1
-  m_RichText: 1
---- !u!4 &1022960207
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1022960205}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .200000003, y: .0450000018, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
 --- !u!1 &1027759379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,7 +1125,7 @@ GameObject:
   - 212: {fileID: 1077625416}
   - 61: {fileID: 1077625415}
   - 50: {fileID: 1077625414}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: PlankWoodXXL
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1348,7 +1230,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1133555705}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: InitialPlanks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1476,7 +1358,7 @@ GameObject:
   - 61: {fileID: 1238971293}
   - 50: {fileID: 1238971292}
   - 114: {fileID: 1238971295}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: PlankWoodXL
   m_TagString: Plank
   m_Icon: {fileID: 0}
@@ -1621,12 +1503,12 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1249185525}
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_FixedAngle: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
 --- !u!114 &1249185529
@@ -1640,12 +1522,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a35c4a57f469e94b949be5f4c04bab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 10
+  maxSpeed: 15
   groundCheck: {fileID: 1875647221}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 4096
-  jumpForce: 800
+  jumpForce: 1500
 --- !u!58 &1249185530
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1965,7 +1847,7 @@ GameObject:
   - 212: {fileID: 1419078597}
   - 61: {fileID: 1419078596}
   - 50: {fileID: 1419078595}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: PlankIceS
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2047,7 +1929,7 @@ GameObject:
   - 61: {fileID: 1431486584}
   - 50: {fileID: 1431486583}
   - 114: {fileID: 1431486586}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: PlankWoodM
   m_TagString: Plank
   m_Icon: {fileID: 0}
@@ -2140,7 +2022,7 @@ GameObject:
   - 61: {fileID: 1435991233}
   - 50: {fileID: 1435991232}
   - 114: {fileID: 1435991235}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: PlankIceXL
   m_TagString: Plank
   m_Icon: {fileID: 0}
@@ -2402,7 +2284,7 @@ GameObject:
   - 4: {fileID: 1498620026}
   - 212: {fileID: 1498620029}
   - 61: {fileID: 1498620028}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: PlankWoodS
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2468,7 +2350,7 @@ GameObject:
   - 61: {fileID: 1595147485}
   - 50: {fileID: 1595147484}
   - 114: {fileID: 1595147488}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: PlankIceS
   m_TagString: Plank
   m_Icon: {fileID: 0}
@@ -2809,6 +2691,7 @@ Transform:
   - {fileID: 705119365}
   m_Father: {fileID: 0}
   m_RootOrder: 8
+<<<<<<< HEAD
 --- !u!1 &2063480589
 GameObject:
   m_ObjectHideFlags: 0
@@ -2876,3 +2759,5 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+=======
+>>>>>>> e0c9956a17cc7829dfdfad4a00e33942ad1d4ce8

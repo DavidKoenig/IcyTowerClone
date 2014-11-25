@@ -10,16 +10,15 @@ public class GameController : MonoBehaviour {
     private GUIText m_GUIHurry;
 	
     // Use this for initialization
-	void Start () 
-    {
+	void Start () {
+        Physics2D.IgnoreLayerCollision(13, 12, true);
+
         m_sScore     = 0;
         m_sHighscore = 0;
-
+       
         m_GUIScore      = GameObject.Find("Score").GetComponent<GUIText>() as GUIText;
         m_GUIHighscore  = GameObject.Find("Highscore").GetComponent<GUIText>() as GUIText;
         m_GUIHurry      = GameObject.Find("Hurry").GetComponent<GUIText>() as GUIText;
-
-        Physics2D.IgnoreLayerCollision(13, 12, true);
 	}
 	
 	// Update is called once per frame
@@ -29,18 +28,13 @@ public class GameController : MonoBehaviour {
         m_GUIHighscore.text = "Highscore: " + m_sHighscore.ToString();
 	}
 
-    void OnGUI()
-    {
-    }
-
-    public void IncreaseScore ()
+    public void IncreaseScore()
     {
         m_sScore += 10;
         if (m_sScore >= 50 && (m_sScore % 50) == 0)
         {
             m_GUIHurry.animation.Play("HurryText");
             CameraMovement.IncreaseCameraSpeed();
-
         }
     }
 }

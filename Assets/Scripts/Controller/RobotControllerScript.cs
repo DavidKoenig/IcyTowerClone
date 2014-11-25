@@ -73,6 +73,10 @@ public class RobotControllerScript : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Ice")
             Die();
+        if (coll.gameObject.transform.position.y > groundCheck.position.y)
+        {
+            gameObject.layer = 13;
+        }
     }
 
     void Flip()

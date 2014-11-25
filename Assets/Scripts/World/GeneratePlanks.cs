@@ -1,19 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Diagnostics;
-
-public class GeneratePlanks : MonoBehaviour {
-
+public class GeneratePlanks : MonoBehaviour
+{
     public GameObject[] planks;
-
     private GameObject m_Clone;
     private float m_InvokeRepeat = 5f;
-
     void Start()
     {
         StartCoroutine(Spawn());
     }
-
     void Update()
     {
         if (CameraMovement.m_sCameraSpeed <= 10f)
@@ -37,8 +33,7 @@ public class GeneratePlanks : MonoBehaviour {
             m_InvokeRepeat = 1.9f;
         }
     }
-
-    IEnumerator Spawn() 
+    IEnumerator Spawn()
     {
         yield return new WaitForSeconds(m_InvokeRepeat);
         while (true)

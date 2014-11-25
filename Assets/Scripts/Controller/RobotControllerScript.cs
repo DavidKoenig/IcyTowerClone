@@ -92,6 +92,10 @@ public class RobotControllerScript : MonoBehaviour {
 
         //if (coll.gameObject.transform.position.y > groundCheck.position.y && gameObject.layer != 13)
         //    coll.collider.enabled = false;
+        if (coll.gameObject.name == "PlankIceS" || coll.gameObject.name == "PlankIceM" || coll.gameObject.name == "PlankIceXL")
+        {
+            print("test2");
+        }
     }
 
     void Flip()
@@ -110,7 +114,8 @@ public class RobotControllerScript : MonoBehaviour {
             PlayerPrefs.SetInt("highscore", m_GameController.getScore());
         }
         PlayerPrefs.Save();
+        PlayerPrefs.SetInt("score", m_GameController.getScore());
 
-        Application.LoadLevel(Application.loadedLevel);
+        Application.LoadLevel("Menu");
     }
 }

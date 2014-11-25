@@ -323,7 +323,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 324260617}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.6056137, y: -13.2571487, z: .0234375}
+  m_LocalPosition: {x: -38.7461815, y: -.55519104, z: .0234375}
   m_LocalScale: {x: .810000002, y: .649999976, z: 1}
   m_Children: []
   m_Father: {fileID: 1133555705}
@@ -418,7 +418,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 370872029}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.4726219, y: 27.486248, z: 0}
+  m_LocalPosition: {x: 7.38226223, y: 40.03759, z: 0}
   m_LocalScale: {x: .810000002, y: .649999976, z: 1}
   m_Children: []
   m_Father: {fileID: 710580211}
@@ -586,9 +586,10 @@ GameObject:
   - 212: {fileID: 468795880}
   - 114: {fileID: 468795881}
   - 61: {fileID: 468795878}
+  - 50: {fileID: 468795879}
   m_Layer: 12
   m_Name: PlankWoodS
-  m_TagString: Untagged
+  m_TagString: Plank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -600,7 +601,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 468795876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.2493668, y: 30.8849144, z: 0}
+  m_LocalPosition: {x: 17.4246292, y: 27.9730034, z: 0}
   m_LocalScale: {x: .519999981, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 710580211}
@@ -616,6 +617,21 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 8.25, y: 1.45000005}
   m_Center: {x: 0, y: 0}
+--- !u!50 &468795879
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 468795876}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!212 &468795880
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1505,7 +1521,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 1
   m_AngularDrag: .0500000007
-  m_GravityScale: 2
+  m_GravityScale: 2.79999995
   m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -1527,7 +1543,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 4096
-  jumpForce: 1500
+  jumpForce: 2000
 --- !u!58 &1249185530
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2298,7 +2314,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1498620025}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34.8531303, y: -9.67713165, z: .0234375}
+  m_LocalPosition: {x: -28.677866, y: -12.6392479, z: .0234375}
   m_LocalScale: {x: .519999981, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1133555705}
@@ -2789,7 +2805,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2063480589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.01999998, y: .5, z: 0}
+  m_LocalPosition: {x: 1.10000002, y: .5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

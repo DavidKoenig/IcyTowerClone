@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () 
     {	    
-       // m_GUIScore.text     = "Score: " + m_sScore.ToString();
+        m_GUIScore.text     = "Score: " + m_sScore.ToString();
         m_GUIHighscore.text = "Highscore: " + m_sHighscore.ToString();
 	}
 

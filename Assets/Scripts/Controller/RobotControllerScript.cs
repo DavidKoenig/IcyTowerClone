@@ -19,10 +19,14 @@ public class RobotControllerScript : MonoBehaviour {
 
 	Animator anim;
 
+    private GameController m_GameController;
+
 	// Use this for initialization
 	void Start () 
 	{
 		anim = GetComponent<Animator>();
+
+        m_GameController = GameObject.Find("GameController").GetComponent("GameController") as GameController;
 	}
 	
 	// Update is called once per frame
@@ -100,6 +104,13 @@ public class RobotControllerScript : MonoBehaviour {
 
     void Die()
     {
+        // Save the Highscore to PlayerPrefs if higher than existing.
+        if (PlayerPrefs.GetInt("highscore") < m_GameController.getScore())
+        { 
+            PlayerPrefs.SetInt("highscore", m_GameController.getScore());
+        }
+        PlayerPrefs.Save();
+
         Application.LoadLevel(Application.loadedLevel);
     }
 }

@@ -20,7 +20,7 @@ public class Plank : MonoBehaviour
         MovePlank();
     }
     void FixedUpdate()
-    {
+   { 
     }
     void MovePlank()
     {
@@ -28,7 +28,7 @@ public class Plank : MonoBehaviour
         float rightBorderX = m_RightBorder.transform.position.x;
         //float cameraY = Camera.main.gameObject.transform.position.y;
         float highestY = FindHighestPlank();
-        float minY = highestY + 3f;
+        float minY = highestY + 8f;
         float maxY = highestY + 10f;
         m_PlankPos = m_GoPlank.transform.position;
         float randomPosX = Random.Range(leftBorderX + m_Width / 2, rightBorderX - m_Width / 2);

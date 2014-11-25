@@ -13,6 +13,7 @@ public class RobotControllerScript : MonoBehaviour {
     float groundRadius = 0.2f;
     public LayerMask whatIsGround;
     public float jumpForce = 300;
+    GameObject[] planks;
 
     bool doubleJump = false;
 
@@ -67,16 +68,26 @@ public class RobotControllerScript : MonoBehaviour {
             gameObject.layer = 13;
         else
             gameObject.layer = 9;
+
+        //planks = GameObject.FindGameObjectsWithTag("Wall") as GameObject[];
+        //foreach (GameObject plank in planks)
+        //{
+        //    if (plank.transform.position.y < gameObject.transform.position.y)
+        //    {
+        //        plank.collider.enabled = true;
+        //        Debug.Log("Bam");
+        //    }
+        //}
+
     }
 
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Ice")
             Die();
-        if (coll.gameObject.transform.position.y > groundCheck.position.y)
-        {
-            gameObject.layer = 13;
-        }
+
+        //if (coll.gameObject.transform.position.y > groundCheck.position.y && gameObject.layer != 13)
+        //    coll.collider.enabled = false;
     }
 
     void Flip()

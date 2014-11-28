@@ -73,15 +73,16 @@ public class RobotControllerScript : MonoBehaviour {
         else
             gameObject.layer = 9;
 
-        //planks = GameObject.FindGameObjectsWithTag("Wall") as GameObject[];
-        //foreach (GameObject plank in planks)
-        //{
-        //    if (plank.transform.position.y < gameObject.transform.position.y)
-        //    {
-        //        plank.collider.enabled = true;
-        //        Debug.Log("Bam");
-        //    }
-        //}
+        planks = GameObject.FindGameObjectsWithTag("Wall") as GameObject[];
+        foreach (GameObject plank in planks)
+        {
+            if (plank.transform.position.y <= gameObject.transform.position.y)
+            {
+                plank.collider2D.enabled = true;
+                gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+                Debug.Log("Bam");
+            }
+        }
 
     }
 
@@ -89,13 +90,6 @@ public class RobotControllerScript : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Ice")
             Die();
-
-        //if (coll.gameObject.transform.position.y > groundCheck.position.y && gameObject.layer != 13)
-        //    coll.collider.enabled = false;
-        if (coll.gameObject.name == "PlankIceS" || coll.gameObject.name == "PlankIceM" || coll.gameObject.name == "PlankIceXL")
-        {
-            print("test2");
-        }
     }
 
     void Flip()

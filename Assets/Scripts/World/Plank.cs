@@ -8,6 +8,7 @@ public class Plank : MonoBehaviour
     private Vector3 m_PlankPos;
     private float m_Width;
     private GameController m_GameController;
+
     // Use this for initialization
     void Start()
     {
@@ -19,9 +20,11 @@ public class Plank : MonoBehaviour
         m_GameController = GameObject.Find("GameController").GetComponent("GameController") as GameController;
         MovePlank();
     }
+
     void FixedUpdate()
-   { 
+    { 
     }
+
     void MovePlank()
     {
         float leftBorderX = m_LeftBorder.transform.position.x;
@@ -38,6 +41,7 @@ public class Plank : MonoBehaviour
         m_PlankPos.z = 0f;
         m_GoPlank.transform.position = new Vector3(m_PlankPos.x, m_PlankPos.y, m_PlankPos.z);
     }
+
     float FindHighestPlank()
     {
         float highestY = 0;
@@ -52,6 +56,7 @@ public class Plank : MonoBehaviour
         }
         return highestY;
     }
+
     void OnBecameVisible()
     {
         m_GameController.IncreaseScore();
